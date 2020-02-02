@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class PlayerMovementJoystick : MonoBehaviour
 {
-   /* public PlayerController m_player;
+    public PlayerController m_player;
     public Joystick m_joystick;
     public NavMeshAgent m_navAgent;
     public bool m_isNavMeshRotation = false;
@@ -31,5 +31,5 @@ public class PlayerMovementJoystick : MonoBehaviour
     {
         //Delta time not needed for nav mesh
         m_navAgent.velocity = a_destination.normalized * m_speed;
-    }*/
+    }
 }

@@ -99,6 +99,6 @@ public class PlayerShotController : MonoBehaviour
         }
         m_shot.Show(from, target);
         m_animator.SetTrigger("attack");
-         m_nextShotTime = Time.time + m_shotDelay;
+        m_nextShotTime = Time.time + m_shotDelay;
     }
 }

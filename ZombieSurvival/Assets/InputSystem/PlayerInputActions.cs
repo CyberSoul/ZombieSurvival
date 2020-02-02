@@ -20,9 +20,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Move"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""26a3b2f9-0c18-43b3-851b-4e5ad0a68e15"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -148,6 +148,61 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""a90215b1-5024-4dc9-9ddf-a3f9b66ba72e"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""1dcde8b2-f4da-4e13-ae14-364f91de7d72"",
+                    ""path"": ""<Touchscreen>/delta/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touchscreen"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""0ca9d021-25dd-4e4c-8e1a-d05607e30b9c"",
+                    ""path"": ""<Touchscreen>/delta/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touchscreen"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""ff05d410-d988-48ad-af4b-5359e63c734f"",
+                    ""path"": ""<Touchscreen>/delta/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touchscreen"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""86da1a58-f771-4fc3-b41c-f36c3dbe3fca"",
+                    ""path"": ""<Touchscreen>/delta/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Touchscreen"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -170,6 +225,17 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 {
                     ""devicePath"": ""<Gamepad>"",
                     ""isOptional"": true,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Touchscreen"",
+            ""bindingGroup"": ""Touchscreen"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Touchscreen>"",
+                    ""isOptional"": false,
                     ""isOR"": false
                 }
             ]
@@ -264,6 +330,15 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         {
             if (m_WinSchemeIndex == -1) m_WinSchemeIndex = asset.FindControlSchemeIndex("Win");
             return asset.controlSchemes[m_WinSchemeIndex];
+        }
+    }
+    private int m_TouchscreenSchemeIndex = -1;
+    public InputControlScheme TouchscreenScheme
+    {
+        get
+        {
+            if (m_TouchscreenSchemeIndex == -1) m_TouchscreenSchemeIndex = asset.FindControlSchemeIndex("Touchscreen");
+            return asset.controlSchemes[m_TouchscreenSchemeIndex];
         }
     }
     public interface IPlayerActions

@@ -48,6 +48,7 @@ public class PlayerMovementInputSystem : MonoBehaviour
         Vector2 inputValue = a_context.ReadValue<Vector2>();
         m_moveDist.x = inputValue.x;
         m_moveDist.z = inputValue.y;
+        Debug.Log($"m_moveDist = {m_moveDist}");
     }
 
     private void MovePlayer(Vector3 a_destination)
