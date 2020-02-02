@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 100
   Damage: 10
-  AttackRate: 1
+  AttackDelay: 1
   Speed: 5

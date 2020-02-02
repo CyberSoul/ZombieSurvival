@@ -10,6 +10,7 @@ public class PlayerShotController : MonoBehaviour
     public PlayerStats m_initStats;
     public Shot m_shot;
     public Transform m_playerTransform;
+    public Animator m_animator;
     //public NavMeshAgent m_navMeshAgent; //Needed for rotation
 
     private float m_shotDelay;
@@ -32,7 +33,8 @@ public class PlayerShotController : MonoBehaviour
             Zombie target = FindClosetEnemy();
             if (target)
             {
-                m_playerTransform.rotation = Quaternion.LookRotation(new Vector3(target.transform.position.x, 0, target.transform.position.z));
+                Vector3 forward = target.transform.position - m_playerTransform.transform.position;
+                m_playerTransform.rotation = Quaternion.LookRotation(new Vector3(forward.x, 0, forward.z));
                 ShotTarget(target);
             }
         }
@@ -96,6 +98,7 @@ public class PlayerShotController : MonoBehaviour
             target = from + direction * 100;
         }
         m_shot.Show(from, target);
-        m_nextShotTime = Time.time + m_shotDelay;
+        m_animator.SetTrigger("attack");
+         m_nextShotTime = Time.time + m_shotDelay;
     }
 }
