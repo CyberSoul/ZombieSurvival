@@ -2,6 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
+/ZombieSurvival/[Ll]ibrary/
+/ZombieSurvival/[Tt]emp/
+/ZombieSurvival/[Oo]bj/
+/ZombieSurvival/[Bb]uild/
+/ZombieSurvival/[Bb]uilds/
+/ZombieSurvival/[Ll]ogs/
+/ZombieSurvival/[Mm]emoryCaptures/
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
