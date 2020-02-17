@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_gunBarrel: {fileID: 478572863439012261}
   m_initStats: {fileID: 11400000, guid: 0832b3c3f725909478b48cc6a3e01d6e, type: 2}
-  m_shot: {fileID: 0}
+  m_shot: {fileID: 5270738117342484471, guid: 884fb3577999a9946a7728ce97500550, type: 3}
   m_playerTransform: {fileID: 3512511646676468642}
   m_animator: {fileID: 3512511646676468665}
 --- !u!1 &3538244413601987065

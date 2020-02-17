@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3361098367246193826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2243861322476098160}
+  - component: {fileID: 9072435959969374378}
+  m_Layer: 0
+  m_Name: MapGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2243861322476098160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3361098367246193826}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9072435959969374378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3361098367246193826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db47c3bf438fc24cb07a01675e9d010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_items:
+  - m_color: {r: 0, g: 0, b: 0, a: 0}
+    m_prefab: {fileID: 7909507856694629328, guid: 0b12873d93902d44e9e54f6e20bf167e,
+      type: 3}
+  - m_color: {r: 0, g: 1, b: 0, a: 0}
+    m_prefab: {fileID: 7909507856694629328, guid: 0a91dde5899655540924c7de1202e506,
+      type: 3}
+  - m_color: {r: 1, g: 0, b: 0, a: 0}
+    m_prefab: {fileID: 7909507856694629328, guid: 478c8682a12f87344a09db19f19a1025,
+      type: 3}
+  - m_color: {r: 0, g: 0, b: 1, a: 1}
+    m_prefab: {fileID: 3512511646676468643, guid: 5c5042edd7da834478eca4f7c6938a49,
+      type: 3}
+  - m_color: {r: 0, g: 1, b: 1, a: 1}
+    m_prefab: {fileID: 5547535183198810949, guid: 972aba43f5da71e43b3e3735b7c0a290,
+      type: 3}
+  m_testMap: {fileID: 0}
