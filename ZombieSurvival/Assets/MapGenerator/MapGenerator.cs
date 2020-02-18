@@ -5,15 +5,19 @@ using UnityEngine.AI;
 
 public class MapGenerator : MonoBehaviour
 {
+    public bool m_isGenerate;
     [SerializeField] MapGeneratorItem[] m_items;
     [SerializeField] Texture2D m_testMap;
-   // [SerializeField] NavMesh m_surface;
+    [SerializeField] NavMeshSurface m_surface;
 
     // Start is called before the first frame update
     void Start()
     {
-        LoadMap(m_testMap);
-        NavMeshBuilder.BuildNavMeshData();
+        if (m_isGenerate)
+        {
+            LoadMap(m_testMap);
+            m_surface.BuildNavMesh();
+        }
     }
 
     // Update is called once per frame
@@ -21,6 +25,13 @@ public class MapGenerator : MonoBehaviour
     {
         
     }
+
+    public void GenerateMap()
+    {
+        LoadMap(m_testMap);
+        m_surface.BuildNavMesh();
+    }
+
 
     private void LoadMap( Texture2D a_map)
     {

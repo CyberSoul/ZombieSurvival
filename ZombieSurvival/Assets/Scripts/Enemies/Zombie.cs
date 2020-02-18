@@ -21,6 +21,12 @@ public class Zombie : MonoBehaviour
     {
         m_player = FindObjectOfType<PlayerController>();
         m_navMeshAgent.updateRotation = false;
+
+       /* if (m_navMeshAgent)
+        {
+            m_navMeshAgent.SetDestination(m_player.transform.position);
+            transform.rotation = Quaternion.LookRotation(m_navMeshAgent.velocity.normalized);
+        }*/
     }
 
     // Update is called once per frame
@@ -29,8 +35,11 @@ public class Zombie : MonoBehaviour
         if (m_isDead)
             return;
 
-        m_navMeshAgent.SetDestination(m_player.transform.position);
-        transform.rotation = Quaternion.LookRotation(m_navMeshAgent.velocity.normalized);
+        if (m_navMeshAgent)
+        {
+            m_navMeshAgent.SetDestination(m_player.transform.position);
+            transform.rotation = Quaternion.LookRotation(m_navMeshAgent.velocity.normalized);
+        }
     }
 
     public void Kill()

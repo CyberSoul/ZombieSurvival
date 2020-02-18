@@ -8,23 +8,43 @@ public class PlayerMovement : MonoBehaviour
     public NavMeshAgent m_navAgent;
     public bool m_isNavMeshRotation = false;
 
+    public Camera cam; //for test
     float m_speed;
     void Start()
     {
+        cam = FindObjectOfType<Camera>();
         m_speed = m_player.m_initialStat.Speed;
         m_navAgent.updateRotation = m_isNavMeshRotation;
+        if (m_joystick == null)
+        {
+            m_joystick = FindObjectOfType<Joystick>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 destination = Vector3.zero;
+        //Just for test
+        if( Input.GetMouseButtonDown(0) )
+        {
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                m_navAgent.SetDestination(hit.point);
+                //MovePlayer(hit.point);
+            }
+            
+        }
+
+        /*Vector3 destination = Vector3.zero;
         destination.x = m_joystick.Horizontal;
         destination.z = m_joystick.Vertical;
-        if (destination != Vector3.zero)
+       // if (destination != Vector3.zero)
         {
             MovePlayer(destination);
-        }
+        }*/
     }
 
     private void MovePlayer( Vector3 a_destination)
