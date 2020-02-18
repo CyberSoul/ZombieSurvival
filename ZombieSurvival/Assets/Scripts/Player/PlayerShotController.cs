@@ -34,7 +34,7 @@ public class PlayerShotController : MonoBehaviour
             if (target)
             {
                 Vector3 forward = target.transform.position - m_playerTransform.transform.position;
-                m_playerTransform.rotation = Quaternion.LookRotation(new Vector3(forward.x, 0, forward.z));
+                m_playerTransform.rotation = Quaternion.LookRotation(new Vector3(forward.x, forward.y, forward.z));
                 ShotTarget(target);
             }
         }
@@ -79,7 +79,6 @@ public class PlayerShotController : MonoBehaviour
         var from = m_gunBarrel.position;
         var target = a_target.transform.position;
 
-
         //Check for some objects between target and player.
         RaycastHit hit;
         if (Physics.Raycast(from, target - from, out hit, 100))
@@ -99,6 +98,6 @@ public class PlayerShotController : MonoBehaviour
         }
         m_shot.Show(from, target);
         m_animator.SetTrigger("attack");
-         m_nextShotTime = Time.time + m_shotDelay;
+        m_nextShotTime = Time.time + m_shotDelay;
     }
 }

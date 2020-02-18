@@ -43,14 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0db47c3bf438fc24cb07a01675e9d010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_isGenerate: 1
   m_items:
-  - m_color: {r: 0, g: 0, b: 0, a: 0}
+  - m_color: {r: 0, g: 0, b: 0, a: 1}
     m_prefab: {fileID: 7909507856694629328, guid: 0b12873d93902d44e9e54f6e20bf167e,
       type: 3}
-  - m_color: {r: 0, g: 1, b: 0, a: 0}
+  - m_color: {r: 0, g: 1, b: 0, a: 1}
     m_prefab: {fileID: 7909507856694629328, guid: 0a91dde5899655540924c7de1202e506,
       type: 3}
-  - m_color: {r: 1, g: 0, b: 0, a: 0}
+  - m_color: {r: 1, g: 0, b: 0, a: 1}
     m_prefab: {fileID: 7909507856694629328, guid: 478c8682a12f87344a09db19f19a1025,
       type: 3}
   - m_color: {r: 0, g: 0, b: 1, a: 1}

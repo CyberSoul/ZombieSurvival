@@ -8,16 +8,36 @@ public class PlayerMovement : MonoBehaviour
     public NavMeshAgent m_navAgent;
     public bool m_isNavMeshRotation = false;
 
-    public Camera cam; //for test
+    //public Camera cam; //for test
     float m_speed;
     void Start()
     {
-        cam = FindObjectOfType<Camera>();
+        // cam = FindObjectOfType<Camera>();
         m_speed = m_player.m_initialStat.Speed;
         m_navAgent.updateRotation = m_isNavMeshRotation;
         if (m_joystick == null)
         {
             m_joystick = FindObjectOfType<Joystick>();
+        }
+        //because player createdin run time...
+        SetupFollowedCameras();
+    }
+    private void SetupFollowedCameras()
+    {
+        /*var camera = FindObjectOfType<FollowCamera>();
+        if (camera)
+        {
+            camera.m_followedTransform = transform;
+        }
+
+        var minimap = FindObjectOfType<MiniMapCamera>();
+        if (minimap)
+        {
+            minimap.m_followedTransform = transform;
+        }*/
+        foreach (var cam in FindObjectsOfType<MiniMapCamera>())
+        {
+            cam.m_target = transform;
         }
     }
 
@@ -25,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //Just for test
-        if( Input.GetMouseButtonDown(0) )
+       /* if( Input.GetMouseButtonDown(0) )
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -36,15 +56,15 @@ public class PlayerMovement : MonoBehaviour
                 //MovePlayer(hit.point);
             }
             
-        }
+        }*/
 
-        /*Vector3 destination = Vector3.zero;
+        Vector3 destination = Vector3.zero;
         destination.x = m_joystick.Horizontal;
         destination.z = m_joystick.Vertical;
        // if (destination != Vector3.zero)
         {
             MovePlayer(destination);
-        }*/
+        }
     }
 
     private void MovePlayer( Vector3 a_destination)
