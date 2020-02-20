@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // cam = FindObjectOfType<Camera>();
         m_speed = m_player.m_initialStat.Speed;
-        m_navAgent.updateRotation = m_isNavMeshRotation;
+        m_navAgent.updateRotation = false;//m_isNavMeshRotation;
         if (m_joystick == null)
         {
             m_joystick = FindObjectOfType<Joystick>();

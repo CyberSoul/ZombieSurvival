@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class MapGenerator : MonoBehaviour
 {
-    public bool m_isGenerate;
+    //public bool m_isGenerate;
     [SerializeField] MapGeneratorItem[] m_items;
     [SerializeField] Texture2D m_testMap;
     [SerializeField] NavMeshSurface m_surface;
@@ -13,11 +13,15 @@ public class MapGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (m_isGenerate)
+        if (StaticDataHandler.LoadedLevel)
+        {
+            LoadMap(StaticDataHandler.LoadedLevel);
+        }
+        else
         {
             LoadMap(m_testMap);
-            m_surface.BuildNavMesh();
         }
+            m_surface.BuildNavMesh();
     }
 
     // Update is called once per frame
