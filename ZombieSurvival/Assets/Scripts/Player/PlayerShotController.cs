@@ -13,8 +13,6 @@ public class PlayerShotController : MonoBehaviour
     public Animator m_animator;
     //public NavMeshAgent m_navMeshAgent; //Needed for rotation
 
-    public Vector3 m_testRotationPoint = new Vector3();
-
     private float m_shotDelay;
     private float m_nextShotTime;
     //private float m_attackRange;
@@ -22,11 +20,12 @@ public class PlayerShotController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_shot = Instantiate(m_shot);
+        m_shot = Instantiate(m_shot, transform.position, transform.rotation);
 
         //m_attackRange = m_initStats.
         m_shotDelay = m_initStats.AttackDelay;
         m_nextShotTime = 0;
+
     }
 
     // Update is called once per frame
@@ -38,8 +37,10 @@ public class PlayerShotController : MonoBehaviour
             if (target)
             {
                 Vector3 forward = target.transform.position - m_playerTransform.transform.position;
-                m_playerTransform.rotation = Quaternion.LookRotation(new Vector3(forward.x, forward.y, forward.z));
-                //m_playerTransform.rotation = Quaternion.LookRotation(new Vector3(m_testRotationPoint.x, m_testRotationPoint.y, m_testRotationPoint.z));
+                m_playerTransform.rotation = Quaternion.LookRotation(new Vector3(forward.x, transform.position.y, forward.z));
+
+                Debug.Log($"Look Rotation: {m_playerTransform.rotation}");
+
                 ShotTarget(target);
             }
         }

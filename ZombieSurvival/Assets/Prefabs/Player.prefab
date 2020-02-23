@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4105728326243718916}
   - component: {fileID: 4018439840288280719}
   - component: {fileID: 1470722594933807062}
-  - component: {fileID: 9193850702769505429}
   m_Layer: 12
   m_Name: Sphere
   m_TagString: Untagged
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &9193850702769505429
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499310780539487799}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3512511646676468643
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,6 +218,7 @@ MonoBehaviour:
   m_shot: {fileID: 5270738117342484471, guid: 884fb3577999a9946a7728ce97500550, type: 3}
   m_playerTransform: {fileID: 3512511646676468642}
   m_animator: {fileID: 3512511646676468665}
+  m_testRotationPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &3538244413601987065
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 478572863439012261}
   m_Layer: 9
-  m_Name: GunbBarrel
+  m_Name: GunBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
