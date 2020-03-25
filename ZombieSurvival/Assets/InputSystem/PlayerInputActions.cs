@@ -29,17 +29,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": """",
-                    ""id"": ""56f16c2d-94d7-47c1-b1e0-f74072eade25"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Win"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
                     ""name"": ""WASD"",
                     ""id"": ""87607cfd-26be-4c89-a784-7aa2a7609e5d"",
                     ""path"": ""2DVector"",
@@ -56,7 +45,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Win"",
+                    ""groups"": ""Key_Mouse"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -67,7 +56,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Win"",
+                    ""groups"": ""Key_Mouse"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -78,7 +67,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Win"",
+                    ""groups"": ""Key_Mouse"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -89,62 +78,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Win"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Gamepad"",
-                    ""id"": ""11ec9179-7221-4a42-8fd7-b512d17dcdbc"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""a69cc42d-6677-41de-8677-87b8f2cfba31"",
-                    ""path"": ""<Gamepad>/leftStick/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Win"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""37571a1e-f3f9-4323-b706-74accd85bc32"",
-                    ""path"": ""<Gamepad>/leftStick/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Win"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""e228ea0b-c5a7-45c1-9316-1c8b6c8b41b3"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Win"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""4a1f412c-de67-4639-8ce9-b62d78f52751"",
-                    ""path"": ""<Gamepad>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Win"",
+                    ""groups"": ""Key_Mouse"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -203,14 +137,69 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""LeftStick"",
+                    ""id"": ""624305df-36d3-41ca-8750-3fad4d8466d5"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""fb69bbe3-7289-459d-afe3-43bb198ab900"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""6d8fc083-5c1c-40d4-be44-9d519ef6e9f9"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""fc0e8ef4-d6a7-4db1-944b-a5851ebabf4a"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""01f875b9-aa88-4841-8b96-56fe83681f0b"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
     ],
     ""controlSchemes"": [
         {
-            ""name"": ""Win"",
-            ""bindingGroup"": ""Win"",
+            ""name"": ""Key_Mouse"",
+            ""bindingGroup"": ""Key_Mouse"",
             ""devices"": [
                 {
                     ""devicePath"": ""<Keyboard>"",
@@ -221,11 +210,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""devicePath"": ""<Mouse>"",
                     ""isOptional"": false,
                     ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<Gamepad>"",
-                    ""isOptional"": true,
-                    ""isOR"": false
                 }
             ]
         },
@@ -235,6 +219,17 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
             ""devices"": [
                 {
                     ""devicePath"": ""<Touchscreen>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Gamepad"",
+            ""bindingGroup"": ""Gamepad"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
                     ""isOptional"": false,
                     ""isOR"": false
                 }
@@ -323,13 +318,13 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
-    private int m_WinSchemeIndex = -1;
-    public InputControlScheme WinScheme
+    private int m_Key_MouseSchemeIndex = -1;
+    public InputControlScheme Key_MouseScheme
     {
         get
         {
-            if (m_WinSchemeIndex == -1) m_WinSchemeIndex = asset.FindControlSchemeIndex("Win");
-            return asset.controlSchemes[m_WinSchemeIndex];
+            if (m_Key_MouseSchemeIndex == -1) m_Key_MouseSchemeIndex = asset.FindControlSchemeIndex("Key_Mouse");
+            return asset.controlSchemes[m_Key_MouseSchemeIndex];
         }
     }
     private int m_TouchscreenSchemeIndex = -1;
@@ -339,6 +334,15 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         {
             if (m_TouchscreenSchemeIndex == -1) m_TouchscreenSchemeIndex = asset.FindControlSchemeIndex("Touchscreen");
             return asset.controlSchemes[m_TouchscreenSchemeIndex];
+        }
+    }
+    private int m_GamepadSchemeIndex = -1;
+    public InputControlScheme GamepadScheme
+    {
+        get
+        {
+            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
+            return asset.controlSchemes[m_GamepadSchemeIndex];
         }
     }
     public interface IPlayerActions

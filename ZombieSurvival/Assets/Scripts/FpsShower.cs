@@ -10,6 +10,7 @@ public class FpsShower : MonoBehaviour
     {
         float unscaledFPS = 1f / Time.unscaledDeltaTime;
         m_textField.text = $"FPS: {unscaledFPS:N2}";
+        Debug.Log($"FPS: {unscaledFPS:N2}");
 
         /*float unscaledFPS = 1f / Time.unscaledDeltaTime;
         float scaledFPS = 1f / Time.deltaTime;

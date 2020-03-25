@@ -16,7 +16,7 @@ public class PlayerMovementInputSystem : MonoBehaviour
     private void Awake()
     {
         m_actions = new PlayerInputActions();
-        m_actions.Player.Move.performed += InputActionContext_Move;//ctx => m_moveDist = new Vector3( ctx.ReadValue<Vector2>();
+        m_actions.Player.Move.performed += InputActionContext_Move;//ctx => m_moveDist = new Vector3( ctx.ReadValue<Vector2>();  
     }
     void Start()
     {
@@ -37,10 +37,11 @@ public class PlayerMovementInputSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_moveDist != Vector3.zero)
+        //if (m_moveDist != Vector3.zero)
         {
             MovePlayer(m_moveDist);
         }
+        Debug.Log($"m_actions.controlSchemes = {m_actions.controlSchemes.ToString()}");
     }
 
     public void InputActionContext_Move(InputAction.CallbackContext a_context)
@@ -48,7 +49,6 @@ public class PlayerMovementInputSystem : MonoBehaviour
         Vector2 inputValue = a_context.ReadValue<Vector2>();
         m_moveDist.x = inputValue.x;
         m_moveDist.z = inputValue.y;
-        Debug.Log($"m_moveDist = {m_moveDist}");
     }
 
     private void MovePlayer(Vector3 a_destination)
